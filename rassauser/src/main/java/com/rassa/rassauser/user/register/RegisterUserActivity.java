@@ -175,7 +175,18 @@ public class RegisterUserActivity extends AppCompatActivity implements
     public void VerifyCodeSuccess() {
         Utils.setStringPreference(this, Utils.KEY_REGISTER, Utils.KEY_PHONENUMBER, phoneNumber);
         this.verifyCode = verifyCode;
+        getUserInfo();
+
+    }
+
+    @Override
+    public void VerifyCodeFailed(String message) {
+
+    }
+
+    void getUserInfo(){
         progressView.setVisibility(View.VISIBLE);
+        progressView.showProgress();
 
         new Register().profile(new iProfile.iResult() {
             @Override
@@ -197,7 +208,12 @@ public class RegisterUserActivity extends AppCompatActivity implements
 
             @Override
             public void onFailedGetUserInfo(int ErrorId, String ErrorMessage) {
-
+                progressView.showError(ErrorMessage, new View.OnClickListener() {
+                    @Override
+                    public void onClick(View view) {
+                        getUserInfo();
+                    }
+                });
             }
 
             @Override
@@ -210,11 +226,6 @@ public class RegisterUserActivity extends AppCompatActivity implements
 
             }
         }).startGetUserInfo(userProfile.getKeyJwt("-1"), phoneNumber);
-    }
-
-    @Override
-    public void VerifyCodeFailed(String message) {
-
     }
 
 
