@@ -52,10 +52,10 @@ public class EditUserActivity extends AppCompatActivity implements
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.rs_activity_register_user);
-     /*   if (android.os.Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
-            getWindow().setStatusBarColor(ContextCompat.getColor(this, R.color.md_blue_700));
-
-        }*/
+        if (android.os.Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
+            getWindow().setStatusBarColor(ContextCompat.getColor(this, R.color.rasa_user_md_light_green_A700));
+            // getWindow().setNavigationBarColor(ContextCompat.getColor(this, R.color.red_level_3));
+        }
         userProfile = new UserProfile(this);
         setUpFrg();
         progressView = findViewById(R.id.progressView);

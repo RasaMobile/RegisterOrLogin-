@@ -40,7 +40,7 @@ import java.util.Locale;
 
 public class FragmentEditUserInfo extends Fragment implements iVEditUserInfo {
 
-    private iUserEditInfo mListener;
+    private OnFragmentInteractionListener mListener;
 
     private View view;
     private EditText editTextName, editTextLastName;
@@ -188,8 +188,8 @@ public class FragmentEditUserInfo extends Fragment implements iVEditUserInfo {
     @Override
     public void onAttach(Context context) {
         super.onAttach(context);
-        if (context instanceof iUserEditInfo) {
-            mListener = (iUserEditInfo) context;
+        if (context instanceof OnFragmentInteractionListener) {
+            mListener = (OnFragmentInteractionListener) context;
         }
     }
 
