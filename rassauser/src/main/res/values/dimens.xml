@@ -1,0 +1,17 @@
+<resources>
+
+
+    <dimen name="rs_margin_5">5dp</dimen>
+    <dimen name="rs_margin_10">10dp</dimen>
+    <dimen name="rs_margin_15">15dp</dimen>
+    <dimen name="rs_margin_20">20dp</dimen>
+    <dimen name="rs_margin_25">25dp</dimen>
+    <dimen name="rs_margin_50">50dp</dimen>
+    <dimen name="rs_margin_100">100dp</dimen>
+
+    <dimen name="rs_font_size_12">12sp</dimen>
+    <dimen name="rs_font_size_13">13sp</dimen>
+    <dimen name="rs_font_size_14">14sp</dimen>
+    <dimen name="rs_font_size_16">16sp</dimen>
+
+</resources>

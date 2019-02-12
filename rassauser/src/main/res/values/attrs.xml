@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+
+
+    <declare-styleable name="ProgressView">
+        <!--     <attr name="android:text"/>
+             <attr name="android:textColor"/>-->
+        <attr name="mode" format="integer"/>
+    </declare-styleable>
+
+
+
+
+</resources>
